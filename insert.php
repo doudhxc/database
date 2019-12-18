@@ -12,7 +12,7 @@ if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
 }
 
-$conn->query('INSERT INTO stagiaire (nom, prenom) VALUES ("X" , "Y")');
+$conn->query('INSERT INTO stagiaire (nom, prenom) VALUES (\"$_POST['nom']\" , \"$_POST['prenom']\")');
 
 $conn->close();
 ?>
