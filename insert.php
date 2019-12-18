@@ -15,7 +15,7 @@ if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
 }
 
-$conn->query('INSERT INTO stagiaire (nom, prenom) VALUES ('$Xnom', '$Xprenom');
+$conn->query("INSERT INTO stagiaire (nom, prenom) VALUES ('$Xnom', '$Xprenom')");
 
 $conn->close();
 ?>
